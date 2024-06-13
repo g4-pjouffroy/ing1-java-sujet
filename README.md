@@ -4,7 +4,7 @@
 
 | Information        | Valeur                       |
 |--------------------|------------------------------|
-| Durée de l'épreuve | 45 mins                      |
+| Durée de l'épreuve | 60 mins                      |
 | Internet autorisé  | Oui                          |
 | IA autorisé        | Oui, mais déconseillé        |
 | Format de rendu    | Dépôt GitHub / Partage drive |
