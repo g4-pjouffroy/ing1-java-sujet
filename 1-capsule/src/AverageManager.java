@@ -1,17 +1,29 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class AverageManager {
 
-    public ArrayList<Integer> nombres = new ArrayList<>();
+    private final List<Integer> nombres;
 
-    public void displayAverage() {
+    public AverageManager() {
+        this.nombres = new ArrayList<>();
+    }
+
+    public void addNombre(int nombre) {
+        this.nombres.add(nombre);
+    }
+
+    public double calculateAverage() {
         int sum = 0;
         for (Integer i : nombres) {
             sum += i;
         }
-
-        String result = (!nombres.isEmpty()) ? String.valueOf((sum/nombres.size())) : "Impossible, aucun nombre";
-        System.out.println("Résultat : " + result);
+        return nombres.isEmpty() ? Double.NaN : (double) sum / nombres.size();
     }
 
+    public void displayAverage() {
+        double average = calculateAverage();
+        String result = Double.isNaN(average) ? "Impossible, aucun nombre" : String.valueOf(average);
+        System.out.println("Résultat : " + result);
+    }
 }
